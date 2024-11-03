@@ -1,0 +1,25 @@
+.menuButtonWrapper {
+  height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  cursor: pointer;
+
+  @media screen and (min-width: 800px) {
+    display: none;
+  }
+}
+
+.menu-overlay {
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-size: 50px;
+  font-style: italic;
+}

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { useRef } from "react";
-import BurgerButton from "./BurgerButton";
+import MobileNavigation from "./MobileNavigation";
 import "./Header.css";
 
 export default function Header() {
@@ -21,11 +21,6 @@ export default function Header() {
       number.textContent = `0${index + 1}. `;
       element.children.item(0).prepend(number);
     });
-
-    return () => {
-      menuEntries = null;
-      menuRef = null;
-    };
   }, []);
 
   return (
@@ -54,9 +49,7 @@ export default function Header() {
         <div className="enableSmallMenu">
           <a href="#">Contact</a>
         </div>
-        <div>
-          <BurgerButton />
-        </div>
+        <MobileNavigation />
       </div>
     </header>
   );
