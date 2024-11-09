@@ -12,6 +12,10 @@ body {
   --foreground: #ededed;
   color: var(--foreground);
   background-color: var(--background);
+  font-family: "Monoaspace";
+  --green: #64ffda;
+  --blue: #57cbff;
+  --white: #e6f1ff;
 }
 
 #root {
@@ -19,9 +23,6 @@ body {
   padding: 2rem;
   font-family: "Monoaspace";
   width: 100%;
-  --green: #64ffda;
-  --blue: #57cbff;
-  --white: #e6f1ff;
 }
 
 .green {
