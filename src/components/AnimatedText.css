@@ -1,0 +1,23 @@
+.AnimatedText-container {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+
+.AnimatedText-char {
+  position: relative;
+}
+
+.AnimatedText-char span {
+  display: inline-block;
+  white-space: pre;
+  transition-property: transform;
+  transition-duration: 0.5s;
+}
+
+.AnimatedText-char span:last-child {
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  left: 0;
+}
