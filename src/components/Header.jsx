@@ -21,7 +21,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="flex flex-row justify-between text-nowrap animated animatedFadeInUp fadeInUp">
+    <header className="flex flex-row justify-between text-nowrap animated animatedFadeInUp fadeInUp w-full">
       <div className="flex items-center">
         <img
           src="./src/assets/logo.png"
