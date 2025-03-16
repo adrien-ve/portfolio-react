@@ -4,7 +4,7 @@ import MobileNavigation from "./MobileNavigation";
 import "./Header.css";
 import AnimatedText from "./AnimatedText";
 
-export default function Header() {
+export default function Header({ setActivePage }) {
   const menuRef = useRef();
 
   useEffect(() => {
@@ -31,27 +31,39 @@ export default function Header() {
         />
       </div>
       <div className="flex flex-column items-center gap-x-8" ref={menuRef}>
-        <div className="enableSmallMenu cursor-pointer">
+        <div
+          className="enableSmallMenu cursor-pointer"
+          onClick={() => setActivePage("About")}
+        >
           <a className="flex flex-row items-center">
             <AnimatedText text="About" />
           </a>
         </div>
-        <div className="enableSmallMenu cursor-pointer">
+        <div
+          className="enableSmallMenu cursor-pointer"
+          onClick={() => setActivePage("Experience")}
+        >
           <a className="flex flex-row items-center">
             <AnimatedText text="Experience" />
           </a>
         </div>
-        <div className="enableSmallMenu cursor-pointer">
+        <div
+          className="enableSmallMenu cursor-pointer"
+          onClick={() => setActivePage("My work")}
+        >
           <a className="flex flex-row items-center">
             <AnimatedText text="My work" />
           </a>
         </div>
-        <div className="enableSmallMenu cursor-pointer">
+        <div
+          className="enableSmallMenu cursor-pointer"
+          onClick={() => setActivePage("Contact")}
+        >
           <a className="flex flex-row items-center">
             <AnimatedText text="Contact" />
           </a>
         </div>
-        <MobileNavigation />
+        <MobileNavigation setActivePage={setActivePage} />
       </div>
     </header>
   );

@@ -4,7 +4,7 @@ import BurgerButton from "./BurgerButton";
 import "./MobileNavigation.css";
 import { useClickAway } from "react-use";
 
-export default function MobileNavigation() {
+export default function MobileNavigation({ setActivePage }) {
   const [isOpen, setOpen] = useState(false);
   const [closing, setClosing] = useState(false);
   const mobileMenuRef = useRef(null);
@@ -32,6 +32,11 @@ export default function MobileNavigation() {
     }
   };
 
+  const handleMenuClick = (page) => {
+    setActivePage(page); // Met à jour la page active
+    toggleMenu(); // Ferme le menu après un clic
+  };
+
   const menu = (
     <div
       className={`menu-overlay flex flex-col items-center text-center justify-center ${
@@ -43,10 +48,27 @@ export default function MobileNavigation() {
       }}
     >
       <div className="menu-entries" ref={mobileMenuRef}>
-        <div className="mobile-button">About</div>
-        <div className="mobile-button">Experience</div>
-        <div className="mobile-button">My work</div>
-        <div className="mobile-button">Contact</div>
+        <div className="mobile-button" onClick={() => handleMenuClick("About")}>
+          About
+        </div>
+        <div
+          className="mobile-button"
+          onClick={() => handleMenuClick("Experience")}
+        >
+          Experience
+        </div>
+        <div
+          className="mobile-button"
+          onClick={() => handleMenuClick("My work")}
+        >
+          My work
+        </div>
+        <div
+          className="mobile-button"
+          onClick={() => handleMenuClick("Contact")}
+        >
+          Contact
+        </div>
       </div>
     </div>
   );
