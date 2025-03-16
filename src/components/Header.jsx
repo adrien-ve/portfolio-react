@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useRef } from "react";
 import MobileNavigation from "./MobileNavigation";
 import "./Header.css";
@@ -31,23 +31,23 @@ export default function Header() {
         />
       </div>
       <div className="flex flex-column items-center gap-x-8" ref={menuRef}>
-        <div className="enableSmallMenu">
-          <a href="" className="flex flex-row items-center">
+        <div className="enableSmallMenu cursor-pointer">
+          <a className="flex flex-row items-center">
             <AnimatedText text="About" />
           </a>
         </div>
-        <div className="enableSmallMenu">
-          <a href="" className="flex flex-row items-center">
+        <div className="enableSmallMenu cursor-pointer">
+          <a className="flex flex-row items-center">
             <AnimatedText text="Experience" />
           </a>
         </div>
-        <div className="enableSmallMenu">
-          <a href="" className="flex flex-row items-center">
+        <div className="enableSmallMenu cursor-pointer">
+          <a className="flex flex-row items-center">
             <AnimatedText text="My work" />
           </a>
         </div>
-        <div className="enableSmallMenu">
-          <a href="" className="flex flex-row items-center">
+        <div className="enableSmallMenu cursor-pointer">
+          <a className="flex flex-row items-center">
             <AnimatedText text="Contact" />
           </a>
         </div>
