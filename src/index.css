@@ -17,13 +17,11 @@ a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
-  cursor: none;
 }
 
 body {
   margin: 0;
   display: flex;
-  /* place-items: center; */
   min-height: 100vh;
 }
 

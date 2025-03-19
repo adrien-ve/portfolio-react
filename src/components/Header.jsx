@@ -31,16 +31,13 @@ export default function Header({ setActivePage }) {
         />
       </div>
       <div className="flex flex-column items-center gap-x-8" ref={menuRef}>
-        <div
-          className="enableSmallMenu cursor-pointer"
-          onClick={() => setActivePage("About")}
-        >
+        <div className="enableSmallMenu" onClick={() => setActivePage("About")}>
           <a className="flex flex-row items-center">
             <AnimatedText text="About" />
           </a>
         </div>
         <div
-          className="enableSmallMenu cursor-pointer"
+          className="enableSmallMenu"
           onClick={() => setActivePage("Experience")}
         >
           <a className="flex flex-row items-center">
@@ -48,7 +45,7 @@ export default function Header({ setActivePage }) {
           </a>
         </div>
         <div
-          className="enableSmallMenu cursor-pointer"
+          className="enableSmallMenu"
           onClick={() => setActivePage("My work")}
         >
           <a className="flex flex-row items-center">
@@ -56,7 +53,7 @@ export default function Header({ setActivePage }) {
           </a>
         </div>
         <div
-          className="enableSmallMenu cursor-pointer"
+          className="enableSmallMenu"
           onClick={() => setActivePage("Contact")}
         >
           <a className="flex flex-row items-center">

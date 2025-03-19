@@ -6,7 +6,7 @@ import Contact from "./Contact";
 
 export default function MainPage({ activePage }) {
   return (
-    <main className="h-full border">
+    <main className="h-full">
       {activePage === "About" ? <About /> : null}
       {activePage === "Experience" ? <Experience /> : null}
       {activePage === "My work" ? <MyWork /> : null}
