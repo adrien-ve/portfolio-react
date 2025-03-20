@@ -1,7 +1,6 @@
 import "./App.css";
 import Header from "./components/Header";
 import MainPage from "./components/MainPage";
-import { useMouseMove, useValue, animate } from "react-ui-animate";
 import { useState } from "react";
 
 function App() {

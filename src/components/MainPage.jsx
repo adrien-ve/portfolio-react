@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import About from "./About";
 import Experience from "./Experience";
 import MyWork from "./MyWork";
