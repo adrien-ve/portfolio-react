@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import Typewriter from "./Typewriter";
-import { main } from "motion/react-client";
 
 export default function About() {
   const mainText = "Heey there! I'm Adrien.";
@@ -9,7 +8,8 @@ export default function About() {
     "I'm passionate about web development and learning new technologies, testing new things, or simply reading in my free time.";
 
   return (
-    <div className="flex flex-col items-center gap-10 justify-center p-10 md:flex-row md:gap-20">
+    <div className="flex flex-col items-center gap-10 p-10 md:flex-row md:gap-20 md:items-start">
+      {/* Image */}
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -21,10 +21,29 @@ export default function About() {
       >
         <img src="../src/assets/adrien.jpg" alt="" />
       </motion.div>
-      <div>
+      {/* Text */}
+      <div className="text-center md:text-left">
         <h1 className="font-azeret text-5xl font-bold italic">
-          <Typewriter speed={50} text={mainText} />
+          <Typewriter text={mainText} />
         </h1>
+        <h2 className="text-2xl font-semibold mt-5">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 2 }}
+          >
+            {subText}
+          </motion.div>
+        </h2>
+        <div className="text-lg mt-1">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 3 }}
+          >
+            <p>{description}</p>
+          </motion.div>
+        </div>
       </div>
     </div>
   );
