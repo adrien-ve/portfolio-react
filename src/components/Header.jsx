@@ -21,7 +21,7 @@ export default function Header({ setActivePage }) {
   }, []);
 
   return (
-    <header className="flex flex-row justify-between text-nowrap animated animatedFadeInUp fadeInUp w-full">
+    <header className="flex flex-row justify-between text-nowrap w-full">
       <div className="flex items-center">
         <img
           src="./src/assets/logo.png"

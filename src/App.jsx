@@ -1,7 +1,8 @@
+import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import MainPage from "./components/MainPage";
-import { useState } from "react";
+import Scrollbar from "./components/Scrollbar";
 
 function App() {
   // Active page
@@ -13,6 +14,7 @@ function App() {
       {/* Header and main page where the sub pages are getting stored */}
       <Header setActivePage={setActivePage} />
       <MainPage activePage={activePage} />
+      <Scrollbar />
     </div>
   );
 }

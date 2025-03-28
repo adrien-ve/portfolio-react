@@ -2,13 +2,14 @@ import { motion } from "framer-motion";
 import Typewriter from "./Typewriter";
 
 export default function About() {
+  // Text used
   const mainText = "Heey there! I'm Adrien.";
   const subText = "I'm a web developer based in France.";
   const description =
     "I'm passionate about web development and learning new technologies, testing new things, or simply reading in my free time.";
 
   return (
-    <div className="flex flex-col items-center gap-10 p-10 md:flex-row md:gap-20 md:items-start">
+    <div className="flex flex-col items-center gap-10 md:flex-row md:gap-20 md:items-start md:p-10">
       {/* Image */}
       <motion.div
         initial={{ opacity: 0, scale: 0 }}
